@@ -31,6 +31,17 @@
 			$query = $this->db->get();
 			return $query->result();
 		}
+
+		/*
+		*	Get by category
+		*/
+		public function get_by_category($category_id){
+			$this->db->select('*');
+			$this->db->from('products');
+			$this->db->where('category_id',$category_id);
+			$query = $this->db->get();
+			return $query->result();
+		}
 	}
 
 ?>

@@ -24,8 +24,8 @@
 			</h3>
 		</div>
 		<ul class="list-group">
-		<?php foreach($categories as $category) : ?>
-		  	<li class="list-group-item"><a href="<?php echo base_url();?>/category/<?php echo $category->id;?>"><?php echo $category->name; ?></a></li>
+		<?php foreach(get_categories_helper() as $category) : ?>
+		  	<li class="list-group-item"><a href="<?php echo base_url();?>products/category/<?php echo $category->id;?>"><?php echo $category->name; ?></a></li>
 		<?php endforeach; ?>
 		</ul>
 	</div>
