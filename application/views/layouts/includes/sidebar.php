@@ -29,3 +29,22 @@
 		<?php endforeach; ?>
 		</ul>
 	</div>
+
+	<div class="panel panel-default panel-list">
+		<div class="panel-heading">
+			 <h3 class="panel-title">
+				Most Popular
+			</h3>
+		</div>
+		<!-- List group -->
+		<ul class="list-group">
+			<li class="list-group-item"><a href="#">Gaming Consoles</a></li>
+			<li class="list-group-item"><a href="#">Xbox One Games</a></li>
+			<li class="list-group-item"><a href="#">Playstation 4 Games</a></li>
+			<li class="list-group-item"><a href="#">Nintendo Wii U Games</a></li>
+			<li class="list-group-item"><a href="#">Xbox 360 Games</a></li>
+			<li class="list-group-item"><a href="#">Playstation 3 Games</a></li>
+			<li class="list-group-item"><a href="#">Nintendo Wii Games</a></li>
+			<li class="list-group-item"><a href="#">Other Console Games</a></li>
+		</ul>
+	</div>
