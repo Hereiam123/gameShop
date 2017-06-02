@@ -31,3 +31,4 @@
 		  <li class="list-group-item"><a href="#">PC</a></li>
 		  <li class="list-group-item"><a href="#">Nintendo 3DS</a></li>
 		</ul>
+	</div>
