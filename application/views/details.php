@@ -12,8 +12,12 @@
 		</div>
 
 		<div class="details-buy">
-			<form>
-				<button type="submit" name="buy_submit" class="btn btn-primary">Add To Cart</button>
+			<form method="post" action="<?php echo base_url(); ?>cart/add">
+				QTY: <input class="qty" type="text" name="qty" value="1" />
+				<input type="hidden" name="item_number" value="<?php echo $product->id; ?>" />
+				<input type="hidden" name="price" value="<?php echo $product->price; ?>" />
+				<input type="hidden" name="title" value="<?php echo $product->title; ?>" />
+				<button class="btn btn-primary" type="submit">Add to Cart</button>
 			</form>
 		</div>
 	</div>
