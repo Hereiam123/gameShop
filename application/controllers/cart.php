@@ -46,6 +46,13 @@
 			redirect('products','refresh');
 		}
 
+		/*
+		*	Process Cart Order
+		*/
+		public function process(){
+
+		}
+
 	}
 
 ?>

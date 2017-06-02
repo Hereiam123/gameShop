@@ -30,7 +30,7 @@
 		</table>
 	<br>
 	<p><button class="btn btn-default" type="submit">Update Cart</button>
-	<a class="btn btn-default" href="cart.html">Go To Cart</a></p>
+	<a class="btn btn-default" href="<?php echo base_url();?>/cart">Go To Cart</a></p>
 	</form>
 	</div>
 	<div class="panel panel-default panel-list">
