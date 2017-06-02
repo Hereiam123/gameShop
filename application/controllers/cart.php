@@ -29,12 +29,21 @@
 				'name' => $this->input->post('title')
 			);
 
-			//print_r($data); die();
-
 			//Insert into cart
 			$this->cart->insert($data);
 
 			redirect('products');
+		}
+
+		/*
+		*	Update Cart
+		*/
+		public function update($in_cart=null){
+			$data = $_POST;
+			$this->cart->update($data);
+
+			//Show cart page
+			redirect('products','refresh');
 		}
 
 	}
