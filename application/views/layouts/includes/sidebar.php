@@ -24,11 +24,8 @@
 			</h3>
 		</div>
 		<ul class="list-group">
-		  <li class="list-group-item"><a href="#">Gaming Consoles</a></li>
-		  <li class="list-group-item"><a href="#">Xbox One</a></li>
-		  <li class="list-group-item"><a href="#">PS4</a></li>
-		  <li class="list-group-item"><a href="#">Nintendo Switch</a></li>
-		  <li class="list-group-item"><a href="#">PC</a></li>
-		  <li class="list-group-item"><a href="#">Nintendo 3DS</a></li>
+		<?php foreach($categories as $category) : ?>
+		  	<li class="list-group-item"><a href="<?php echo base_url();?>/category/<?php echo $category->id;?>"><?php echo $category->name; ?></a></li>
+		<?php endforeach; ?>
 		</ul>
 	</div>

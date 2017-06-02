@@ -6,6 +6,7 @@
 			//Get all products
             $data['products']=$this->Product_model->get_products();
 			$data['main_content']='products';
+			$data['categories']=get_categories_helper();
 			$this->load->view('layouts/main',$data);
 		}
 
