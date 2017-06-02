@@ -39,7 +39,7 @@
 		<!-- List group -->
 		<ul class="list-group">
 		<?php foreach(get_popular_helper() as $popular) : ?>
-			<li class="list-group-item"><a href="<?php echo base_url();?>product/details/<?php echo $popular->id;?>"><?php echo $popular->title; ?></a></li>
+			<li class="list-group-item"><a href="<?php echo base_url();?>products/details/<?php echo $popular->id;?>"><?php echo $popular->title; ?></a></li>
 		<?php endforeach; ?>
 		</ul>
 	</div>
