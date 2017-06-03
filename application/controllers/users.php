@@ -5,10 +5,12 @@
 		public function register(){
 
 			//Validation rules
-			$this->form_validation->set_rules('first_name','First name','trim|required|min_lenght[5]|max_length[20]');
-			$this->form_validation->set_rules('last_name','Last name','required');
-			$this->form_validation->set_rules('','First name','required');
-			$this->form_validation->set_rules('first_name','First name','required');
+			$this->form_validation->set_rules('first_name','First name','trim|required');
+			$this->form_validation->set_rules('last_name','Last name','trim|required');
+			$this->form_validation->set_rules('email','Email','trim|required|valid_email');
+			$this->form_validation->set_rules('username','Username','trim|required|min_length[5]|max_length[20]');
+			$this->form_validation->set_rules('password','Password','trim|required|min_length[5]|max_length[10]');
+			$this->form_validation->set_rules('password2','Password Confirmation','trim|required|matches[password]');
 
 			if ($this->form_validation->run() == FALSE){
 					//show register view
@@ -16,7 +18,7 @@
 					$this->load->view('layouts/main',$data);
 			}
 				else{
-					$this->load->view('formsuccess');
+					
 			}
 
 		}
