@@ -12,17 +12,28 @@
 			$this->form_validation->set_rules('password','Password','trim|required|min_length[5]|max_length[10]');
 			$this->form_validation->set_rules('password2','Password Confirmation','trim|required|matches[password]');
 
+			//If form validation isn't true
 			if ($this->form_validation->run() == FALSE){
-					//show register view
-					$data['main_content'] = 'register';
-					$this->load->view('layouts/main',$data);
+				//show register view
+				$data['main_content'] = 'register';
+				$this->load->view('layouts/main',$data);
 			}
-				else{
-					
-			}
+			//If form is valid, user model test to see if it registers
+			else{
+				$data=array(
+					'first_name'=>$this->input->post('first_name'),
+					'last_name'=>$this->input->post('last_name'),
+					'email'=>$this->input->post('email'),
+					'username'=>$this->input->post('username'),
+					'password'=>$this->input->post('password')
+				);
 
+				if($this->User_model->register($data)){
+					$this->session->set_flashdata('registered', 'You are now registered');
+					redirect('products');
+				}
+			}
 		}
-
 	}
 
 ?>
