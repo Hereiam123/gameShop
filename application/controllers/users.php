@@ -18,7 +18,7 @@
 				$data['main_content'] = 'register';
 				$this->load->view('layouts/main',$data);
 			}
-			//If form is valid, user model test to see if it registers
+			//If form is valid, test user model to see if it registers
 			else{
 				$data=array(
 					'first_name'=>$this->input->post('first_name'),
@@ -29,10 +29,51 @@
 				);
 
 				if($this->User_model->register($data)){
+					//message to be returned upon successful register
 					$this->session->set_flashdata('registered', 'You are now registered');
 					redirect('products');
 				}
 			}
+		}
+
+		public function login(){
+
+			$this->form_validation->set_rules('username','Username','trim|required');
+			$this->form_validation->set_rules('password','Password','trim|required');
+
+			$username=$this->input->post('username');
+			$password=$this->input->post('password');
+
+			$user_id = $this->User_model->login($username , $password);
+
+			//See if user exists and has correct password
+			if($user_id){
+				$data = array(
+					'user_id'=>$user_id,
+					'username'=>$username,
+					'logged_in'=>true
+				);
+
+				//set session data for logged in user
+				$this->session->set_userdata($data);
+
+				$this->session->set_flashdata('login success','You have logged in');
+			}
+			else{
+				//Set error message
+				$this->session->set_flashdata('failed login','Login failed');
+				redirect('products');
+			}
+		}
+
+		public function logout(){
+			//Unset user data
+			$this_>session->unset_userdata('logged_in');
+			$this_>session->unset_userdata('user_id');
+			$this->session->unset_userdata('username');
+			$this->session->sess_destroy();
+
+			redirect('products');
 		}
 	}
 

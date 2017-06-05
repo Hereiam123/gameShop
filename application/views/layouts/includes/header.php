@@ -37,15 +37,21 @@
             <li class="active"><a href="<?php echo base_url();?>">Home</a></li>
             <li><a href="<?php echo base_url();?>users/register">Create Account</a></li>
           </ul>
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-                <input name= "username" type="text" class="form-control" placeholder="Enter UserName">
-            </div>
-            <div class="form-group">
-                <input name= "password" type="password" class="form-control" placeholder="Enter Password">
-            </div>
-            <button type="submit" class="btn btn-default" name="submit">Login</button>
-          </form>
+          <?php if(!$this->session->userdata('logged_in')): ?>
+			  <form class="navbar-form navbar-right" action="<?php base_url();?>users/login" method="post">
+				<div class="form-group">
+					<input name= "username" type="text" class="form-control" placeholder="Enter Username">
+				</div>
+				<div class="form-group">
+					<input name= "password" type="password" class="form-control" placeholder="Enter Password">
+				</div>
+				<button type="submit" class="btn btn-default" name="submit">Login</button>
+			  </form>
+          <?php else : ?>
+			  <form class="navbar-form navbar-right" action="<?php base_url();?>users/logout" method="post">
+			  <button name="submit" type="submit" class="btn btn-default">Logout</button>
+			  </form>
+          <?php endif; ?>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
