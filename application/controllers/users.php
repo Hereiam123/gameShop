@@ -58,6 +58,7 @@
 				$this->session->set_userdata($data);
 
 				$this->session->set_flashdata('login success','You have logged in');
+				redirect('products');
 			}
 			else{
 				//Set error message

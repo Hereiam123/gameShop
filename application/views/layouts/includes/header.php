@@ -35,7 +35,11 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="<?php echo base_url();?>">Home</a></li>
+          <?php if(!$this->session->userdata('logged_in')):?>
             <li><a href="<?php echo base_url();?>users/register">Create Account</a></li>
+          <?php else : ?>
+			<li><a href="#"><?php echo $this->session->userdata('username'); ?></a></li>
+          <?php endif; ?>
           </ul>
           <?php if(!$this->session->userdata('logged_in')): ?>
 			  <form class="navbar-form navbar-right" action="<?php base_url();?>users/login" method="post">
