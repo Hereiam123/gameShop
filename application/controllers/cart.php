@@ -52,6 +52,10 @@
 		public function process(){
 			if($_POST){
 				foreach($this->input->post('item_name') as $key=>$value){
+					//Get tax and shipping from config file
+					$this->tax=$this->config->item('tax');
+					$this->shipping=$this->config->item('shipping'):
+
 					$item_id=$this->input->post('item_code')[$key];
 					$product=$this->Product_model->get_product_details($item_id);
 
@@ -102,6 +106,8 @@
 
 				//Session array for when returned
 				$_SESSION['paypal_products']=$paypal_products;
+
+				
 			}
 		}
 	}

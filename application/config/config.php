@@ -377,9 +377,6 @@ $config['encryption_key'] = '';
 | except for 'cookie_prefix' and 'cookie_httponly', which are ignored here.
 |
 */
-$config['shipping']=2.00;
-$config['tax']=2.99;
-
 $config['sess_driver'] = 'files';
 $config['sess_cookie_name'] = 'ci_session';
 $config['sess_expiration'] = 7200;
@@ -387,6 +384,23 @@ $config['sess_save_path'] = NULL;
 $config['sess_match_ip'] = FALSE;
 $config['sess_time_to_update'] = 300;
 $config['sess_regenerate_destroy'] = FALSE;
+
+/*
+ |--------------------------------------------------------------------------
+| Custom Config
+|--------------------------------------------------------------------------
+|
+*/
+$config['shipping'] = 6.99;
+$config['tax'] = 5.99;
+$config['paypal_mode']				= 'live';
+$config['paypal_api_username'] 		= 'bdemaio1@gmail.com';
+$config['paypal_api_password']		= '7E6XMZBD5MFDHA6B';
+$config['paypal_api_signature']		= 'A9UQTfOH0TrBuTt8FlB8N0fn3zfyAvhSVpmCmZeWVW5o0hm6n29sLTZj';
+$config['paypal_currency_code']		= 'USD';
+$config['paypal_return_url']		= 'http://localhost/gameShop/cart/process';
+$config['paypal_cancel_url']		= 'http://localhost/gameShop/cart/cancel';
+
 
 /*
 |--------------------------------------------------------------------------
