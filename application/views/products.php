@@ -4,6 +4,18 @@
 	</div>
 <?php endif; ?>
 
+<?php if($this->session->flashdata('failed login')) :?>
+	<div class="alert alert-danger">
+		<?php echo $this->session->flashdata('failed login'); ?>
+	</div>
+<?php endif; ?>
+
+<?php if($this->session->flashdata('login success')) :?>
+	<div class="alert alert-success">
+		<?php echo $this->session->flashdata('login success'); ?>
+	</div>
+<?php endif; ?>
+
 <?php foreach($products as $product) :?>
 	<div class="col-md-4 game">
 		<div class="game-price"><?php echo $product->price;?></div>
