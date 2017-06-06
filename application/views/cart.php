@@ -34,6 +34,10 @@
 				<td class="right" style="text-align:right"><strong>$<?php echo $this->cart->format_number($this->cart->total()+ $this->config->item('shipping') + $this->config->item('tax')); ?></strong></td>
 			</tr>
 		</table>
+		<?php if(!$this->session->userdata('logged_in')):?>
+			<p><a href="<?php echo base_url(); ?>users/register" class="btn btn-primary">Register</a></p>
+			<p><em>You must log in to start an order!</em></p>
+		<?php else: ?>
 		<br>
 		<h3>Shipping Info</h3>
 			<div class="form-group">
@@ -57,6 +61,7 @@
 				<input type="text" class="form-control" name="zipcode">
 			</div>
 		<p><button class="btn btn-primary" type="submit" name="submit">Checkout</button></p>
+		<?php endif; ?>
 	</form>
 <?php else : ?>
 	<p>There are no items in your cart</p>
