@@ -55,6 +55,14 @@
 			$query=$this->db->get();
 			return $query->result();
 		}
+
+		/*
+		*	Insert order to Database
+		*/
+		public function add_order($order_data){
+			$insert=$this->db->insert('orders',$order_data);
+			return $insert;
+		}
 	}
 
 ?>

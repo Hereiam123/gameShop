@@ -1,5 +1,5 @@
 <?php if($this->cart->contents()) : ?>
-	<form method="post" action="cart/process">
+	<form method="post" action="<?php echo base_url(); ?>cart/process">
 		<table class="table table-striped">
 			<tr>
 				<th>Quanity</th>
@@ -60,7 +60,6 @@
 				<label>Zipcode</label>
 				<input type="text" class="form-control" name="zipcode">
 			</div>
-			
 		<p><button class="btn btn-primary" type="submit" name="submit">Checkout</button></p>
 		<?php endif; ?>
 	</form>
