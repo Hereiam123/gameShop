@@ -49,7 +49,7 @@
 			//See if user exists and has correct password
 			if($user_id){
 				$data = array(
-					'user_id'=>$user_id,
+					'user_id'=>$user_id->id,
 					'username'=>$username,
 					'logged_in'=>true
 				);
