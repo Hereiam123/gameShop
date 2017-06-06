@@ -393,10 +393,10 @@ $config['sess_regenerate_destroy'] = FALSE;
 */
 $config['shipping'] = 6.99;
 $config['tax'] = 5.99;
-$config['paypal_mode']				= 'live';
-$config['paypal_api_username'] 		= 'bdemaio1@gmail.com';
-$config['paypal_api_password']		= '7E6XMZBD5MFDHA6B';
-$config['paypal_api_signature']		= 'A9UQTfOH0TrBuTt8FlB8N0fn3zfyAvhSVpmCmZeWVW5o0hm6n29sLTZj';
+$config['paypal_mode']				= 'sandbox';
+$config['paypal_api_username'] 		= 'bdemaio1-facilitator_api1.gmail.com';
+$config['paypal_api_password']		= 'F5HE3WAF2D8S5ZJM';
+$config['paypal_api_signature']		= 'AFcWxV21C7fd0v3bYYYRCpSSRl31A.JGRv1mlhnsfBvhnQ9QpNstMsKL';
 $config['paypal_currency_code']		= 'USD';
 $config['paypal_return_url']		= 'http://localhost/gameShop/cart/process';
 $config['paypal_cancel_url']		= 'http://localhost/gameShop/cart/cancel';

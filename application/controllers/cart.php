@@ -120,7 +120,6 @@
 						'&PAYMENTREQUEST_0_AMT='.urlencode($this->grand_total).
 						'&PAYMENTREQUEST_0_CURRENCYCODE='.urlencode($this->config->item('paypal_currency_code')).
 						'&LOCALECODE=GB'. //PayPal pages to match the language on your website.
-						'&LOGOIMG=http://www.techguystaging.com/demofiles/logo.png'. //Custom logo
 						'&CARTBORDERCOLOR=FFFFFF'.
 						'&ALLOWNOTE=1';
 
@@ -130,7 +129,7 @@
 				//Respond according to message we receive from Paypal
 				if("SUCCESS" == strtoupper($httpParsedResponseAr["ACK"]) || "SUCCESSWITHWARNING" == strtoupper($httpParsedResponseAr["ACK"])){
 					//Redirect user to PayPal store with Token received.
-					$paypal_url ='https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token='.$httpParsedResponseAr["TOKEN"].'';
+					$paypal_url ='https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token='.$httpParsedResponseAr["TOKEN"].'';
 					header('Location: '.$paypal_url);
 				} else{
 					//Show error message
