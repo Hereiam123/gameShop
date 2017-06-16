@@ -3,6 +3,7 @@
 	class Products extends CI_Controller{
 
 		public function index(){
+            echo "I'm dead"; die();
 			//Get all products
             $data['products']=$this->Product_model->get_products();
 			$data['main_content']='products';
