@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/gameShop/';
+$config['base_url'] = 'LowCost-env.j9kz4cmw7w.us-east-2.elasticbeanstalk.com';
 
 /*
 |--------------------------------------------------------------------------
@@ -398,8 +398,8 @@ $config['paypal_api_username'] 		= 'bdemaio1-facilitator_api1.gmail.com';
 $config['paypal_api_password']		= 'F5HE3WAF2D8S5ZJM';
 $config['paypal_api_signature']		= 'AFcWxV21C7fd0v3bYYYRCpSSRl31A.JGRv1mlhnsfBvhnQ9QpNstMsKL';
 $config['paypal_currency_code']		= 'USD';
-$config['paypal_return_url']		= 'http://localhost/gameShop/cart/process';
-$config['paypal_cancel_url']		= 'http://localhost/gameShop/cart/cancel';
+$config['paypal_return_url']		= 'http://bdemaio.com/gameShop/cart/process';
+$config['paypal_cancel_url']		= 'http://bdemaio.com/gameShop/cart/cancel';
 
 
 /*
