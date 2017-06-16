@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'LowCost-env.j9kz4cmw7w.us-east-2.elasticbeanstalk.com';
+$config['base_url'] = 'https://fierce-coast-30613.herokuapp.com';
 
 /*
 |--------------------------------------------------------------------------
