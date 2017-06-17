@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-$config['base_url'] = 'https://gamershop.herokuapp.com/';
+$config['base_url'] = 'http://lowcost-env.j9kz4cmw7w.us-east-2.elasticbeanstalk.com/';
 
 /*
 |--------------------------------------------------------------------------
