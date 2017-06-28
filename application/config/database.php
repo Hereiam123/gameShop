@@ -73,12 +73,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
-$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-
-$server = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
-$database = substr($url["path"], 1);
+$server = 'gameshop.ceckt6ducutc.us-east-2.rds.amazonaws.com';
+$username = 'hereiam123';
+$password = '7654321a';
+$database = 'bdemDB';
 
 $db['default'] = array(
 	'dsn'	=> '',

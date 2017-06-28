@@ -40,14 +40,14 @@
           <?php else : ?>
 			<li><a href="#"><?php echo $this->session->userdata('username'); ?></a></li>
           <?php endif; ?>
-          </ul>
+           </ul>
           <?php if(!$this->session->userdata('logged_in')): ?>
 			  <form class="navbar-form navbar-right" action="<?php base_url();?>users/login" method="post">
 				<div class="form-group">
-					<input name= "username" type="text" class="form-control" placeholder="Enter Username">
+                   <input name= "username" type="text" class="form-control" placeholder="Enter Username">
 				</div>
 				<div class="form-group">
-					<input name= "password" type="password" class="form-control" placeholder="Enter Password">
+                   <input name= "password" type="password" class="form-control" placeholder="Enter Password">
 				</div>
 				<button type="submit" class="btn btn-default" name="submit">Login</button>
 			  </form>
